@@ -9,7 +9,7 @@ output: html_document
 
 ### Script name
 
-### Packages that have to be loaded to run scriptare used
+### Packages that have to be loaded to run script are used
 Package dplyr v0.4.2
 
 ### Data used for analysis

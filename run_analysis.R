@@ -75,7 +75,7 @@ mean_and_std_features$V2 <- gsub('-', "_", mean_and_std_features$V2)
 ## Naming columns (variables) of data frames
 colnames(subject_test_and_train) <- "subject"
 colnames(y_test_and_train) <- "activity"
-colnames(x_test_an_train) <- mean_and_std_features$V2
+colnames(x_test_and_train) <- mean_and_std_features$V2
 
 ## 5. From the data set in step 4, creates a second, independent tidy data set with the average 
 ## of each variable for each activity and each subject.
@@ -83,7 +83,7 @@ colnames(x_test_an_train) <- mean_and_std_features$V2
 ## one data frame for test_and_train, group by subject and activity, and summarize each numeric variable
 
 ## Tidy data set in data frame calculating mean of each feature grouping by subject and activity
-tidy_data_set <- cbind(subject_test_and_train, y_test_and_train, x_test_an_train) %>% 
+tidy_data_set <- cbind(subject_test_and_train, y_test_and_train, x_test_and_train) %>% 
   group_by(subject, activity) %>% summarise_each(funs(mean))
 
 ## Export tidy data set to text file
